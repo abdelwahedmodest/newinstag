@@ -1,0 +1,24 @@
+[Unit]
+
+Deploy Python Script on Schedule
+
+sudo nano /etc/systemd/system/xxxxxxxx.service
+
+GENERIC PYTHON SCRIPT SYSTEM FILE
+
+Description=Twitter Bot Skolo Online Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Environment="PATH=/home/zatosh/development/twitter/twitterenv/bin"
+ExecStart=/home/zatosh/development/twitter/twitterenv/bin/python /home/zatosh/development/twitter/skolo/main.py
+
+[Install]
+WantedBy=multi-user.target
+
+GENERIC PYTHON SCRIPT SYSTEM FILE-
+
+sudo systemctl start xxxxxx
+sudo systemctl enable xxxxxx
+sudo systemctl status xxxxxxxx
