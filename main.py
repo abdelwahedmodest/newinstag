@@ -1,9 +1,8 @@
 
 from instapy import InstaPy, smart_run
 import config
-import schedule
 import time
-
+import schedule
 
 def wordPressSession():
     comments = [
