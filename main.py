@@ -24,8 +24,8 @@ def wordPressSession():
 
 
 session = InstaPy(username=config.insta_username,
-password=config.insta_password,
-headless_browser=True)
+                  password=config.insta_password,
+                  headless_browser=True)
 
 try:
     with smart_run(session):
@@ -37,17 +37,17 @@ try:
 except:
     import traceback
     print(traceback. format_exc())
-pass
+    pass
 
 def followSomePeople():
     try:
         with smart_run(session):
-        session[follow_user_followers(['udemy', 'gibsacademy', 'gibsbusinessschool'], amount=10, randomize=True, sleep_delay=20)]
+            session[follow_user_followers(['udemy', 'gibsacademy', 'gibsbusinessschool'], amount=10, randomize=True, sleep_delay=20)]
 
-except:
-import traceback
-print(traceback. format_exc())
-pass
+    except:
+        import traceback
+        print(traceback. format_exc())
+        pass
 
 
 schedule.every().day.at("10:30").do(wordPressSession)
